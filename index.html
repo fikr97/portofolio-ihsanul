@@ -47,8 +47,8 @@
     <section id="home" class="jumbotron text-center">
       <img src="img/foto.jpg" width="200" alt="ihsanul fikri" class="rounded-circle img-thumbnail img"/>
       <div class="card-body">
-        <h2 class="card-title" data-aos="zoom-in" data-aos-delay="2000">IHSANUL FIKRI</h2>
-        <p class="fs-5" data-aos="zoom-in" data-aos-delay="3000">Web Programmer | Reciter Qur'an</p>
+        <h2 class="card-title">IHSANUL FIKRI</h2>
+        <p class="fs-5 status"></p>
       </div>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 250">
         <path
@@ -218,6 +218,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/EasePack.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/CustomEase.min.js"></script>
     <script>
+        gsap.registerPlugin(TextPlugin);
+        gsap.to(".status", {duration: 1, delay: 2, text:"Web Programmer | Reciter Qur'an"});
+        gsap.from(".card-title", {duration: 1, x = -50, delay : 1.5, ease: "back"});
         gsap.from(".navbar", { duration: 2, ease: "bounce", y: -100 });
         gsap.from(".jumbotron img", {duration:1, delay:1, rotateY:360});
     </script>
